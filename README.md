@@ -1,4 +1,3 @@
 # crypto-register
 
-Small Change
 
