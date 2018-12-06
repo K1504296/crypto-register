@@ -8,9 +8,21 @@
 
 ## 1.1) Hardware Requirements
 
-- 1
-- 2
-- ...
+  ### Main Processor
+- 1 x Adafruit Thermal Printer Guts
+  - https://www.adafruit.com/product/2753
+- 1 x 2.1mm Female DC Power adapter
+  - https://www.adafruit.com/product/368 
+- 1 x 5V 2A power supply
+  - https://www.adafruit.com/product/276 
+- 1 x Nokia 5110 (PCD 8544)
+  - https://www.adafruit.com/product/338
+  
+  ### LCD Screen
+- 1 x PCD 8544 (Nokia 5110)
+  - https://www.adafruit.com/product/338
+- 1 x TXB0104 Bi-directional level shifter
+  - https://www.adafruit.com/product/1875
 
 ## 1.2) Hardware Setup
 
