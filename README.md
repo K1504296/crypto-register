@@ -9,6 +9,9 @@
 ## 1.1) Hardware Requirements
 
   ### Main Processor
+- 1 x Dragon Board 410C
+ 
+  ### Thermal Printer
 - 1 x Adafruit Thermal Printer Guts
   - https://www.adafruit.com/product/2753
 - 1 x 2.1mm Female DC Power adapter
