@@ -17,24 +17,17 @@
 ### Main Processor
 - 1 x Dragon Board 410C
 - 1 x dragonboard sensor Mezzanine
-- 1 x [12V 2A plug-in Adaptor]
-(https://www.arrow.com/en/products/wm24p6-12-a-ql/autec-power-systems (When purchases, comes with compatible power adaptor))
+- 1 x [12V 2A plug-in Adaptor](https://www.arrow.com/en/products/wm24p6-12-a-ql/autec-power-systems) (When purchases, comes with compatible power adaptor)
  
 ### Thermal Printer
-- 1 x Adafruit Thermal Printer Guts
-  - https://www.adafruit.com/product/2753
-- 1 x 2.1mm Female DC Power adapter
-  - https://www.adafruit.com/product/368 
-- 1 x 5V 2A power supply
-  - https://www.adafruit.com/product/276 
-- 1 x Nokia 5110 (PCD 8544)
-  - https://www.adafruit.com/product/338
+- 1 x [Adafruit Thermal Printer Guts](https://www.adafruit.com/product/2753)
+- 1 x [2.1mm Female DC Power adapter](https://www.adafruit.com/product/368) 
+- 1 x [5V 2A power supply](https://www.adafruit.com/product/276) 
+- 1 x [Nokia 5110 (PCD 8544)](https://www.adafruit.com/product/338)
   
 ### LCD Screen
-- 1 x PCD 8544 (Nokia 5110)
-  - https://www.adafruit.com/product/338
-- 1 x BSS138 4 Channel Bi-directional level shifter
-  - https://www.adafruit.com/product/757 
+- 1 x [PCD 8544 (Nokia 5110)](https://www.adafruit.com/product/338)
+- 1 x [BSS138 4 Channel Bi-directional level shifter](https://www.adafruit.com/product/757) 
   
 ### Connector
   - 1 x USB to TTL Serial Cable
@@ -63,8 +56,8 @@ IMPORTANT
   
 First, screw two wires (positive and negative) on to the Female DC power adaptor. Connect the positive port to the VH pin of the printer. Connect the ground to the GND pin. 
 
-For more detailed instructions of how to hook up the thermal printer, look into [here] (labeled as product #2753) 
-(https://learn.adafruit.com/mini-thermal-receipt-printer/microcontroller)
+For more detailed instructions of how to hook up the thermal printer, look into [here](https://learn.adafruit.com/mini-thermal-receipt-printer/microcontroller) (labeled as product #2753) 
+
 
 IMPORTANT:
 - The ground pin from the power adaptor must also be connected to the ground pin of the Dragon Board
@@ -88,8 +81,8 @@ The LCD screens needs 3.3V, which is not supplied from the Dragonboard. (1.8V an
 
 The first option would be the best choice. However, the team did not have enough time to do proper research on the sensor Mezzanine to have a full understanding of how to use the 3.3V signal pins. So, we decided to stick with second option. The third option does not establish a proper connection between the LCD and the board. It works for now, but might run into problems when the component is changed to something that requires more power. 
 
-For more hookup guide, look into [Sparkfun’s Level Convertor hookup guide]. (Although it’s from Sparkfun, it works well with any level shifter)
-(https://learn.sparkfun.com/tutorials/bi-directional-logic-level-converter-hookup-guide/all)
+For more hookup guide, look into [Sparkfun’s Level Convertor hookup guide](https://learn.sparkfun.com/tutorials/bi-directional-logic-level-converter-hookup-guide/all). (Although it’s from Sparkfun, it works well with any level shifter)
+
 
 The High Voltage side is connected to the Dragonboard
 
