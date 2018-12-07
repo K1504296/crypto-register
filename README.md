@@ -48,7 +48,7 @@
 
 Place the sensor Mezzanine on top, so it is fully covering the Dragonboard. Then connect the power adaptor on the Dragonboard to turn on.
 
-IMPORTANT
+IMPORTANT:
 - DO NOT connect the Mezzanine while the Dragonboard is TURNED ON! It will short the circuit and break the board. 
 
 
