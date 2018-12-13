@@ -4,7 +4,7 @@ from User import user
 
 import serial
 import subprocess
-#import adafruit_thermal_printer
+import adafruit_thermal_printer
 
 
 def printOutFinalBill():
