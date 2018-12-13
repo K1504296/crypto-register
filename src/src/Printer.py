@@ -1,5 +1,4 @@
 from Bill import bill
-from CoinMarketCap import *
 from User import user
 
 import serial

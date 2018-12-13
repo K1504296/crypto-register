@@ -4,7 +4,7 @@
 
 '''
 from Item import *
-from CoinMarketCap import *
+from Exchange import *
 
 class Bill:
 

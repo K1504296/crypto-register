@@ -3,7 +3,7 @@ import os
 sys.path.append(os.getcwd() + "/../src")
 from PyQt4 import QtGui, QtCore
 from User import user
-from CoinMarketCap import *
+from Exchange import *
 from TronAPI import *
 from Inventory import *
 from Bill import bill
