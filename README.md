@@ -1,6 +1,5 @@
 # Receipt Printer
 
-
 # Table of Contents
 
 - 1) Hardware
@@ -122,11 +121,100 @@ CLK and DIN must be Clock and Serial Data In (MOSI) respectively, but D/C and CS
 
 We used Debian Linaro for this project, instructions can be [found here](https://www.96boards.org/documentation/consumer/dragonboard/dragonboard410c/downloads/debian.md.html)
 
-## 2.2) Dependencies
+## 2.2) Modules and Libraries
 
-## 2.3) Modules and Libraries
+### 1. Update / Upgrade
 
+```python3
+sudo atp-get update
+```
+```python3
+sudo apt-get upgrade
+```
+### 2. Circuitpython bundle
+
+```python3
+python3 –m venv .env
+sourse .env/bin/activarte
+pip install circuitpython-build-tools
+```
+
+### 3. Sphinx documendation
+```python3
+python3 –m venv .env
+sourse .env/bin/activarte
+pip install Sphinx-rtd-theme
+```
+
+After install, you have to activate this
+```python3
+cd docs
+sphinx0-build –E –W –b html . _build/html
+```
+
+### 4. Install python libraries
+```python3
+sudo atp-get update
+```
+```python3
+pip3 install RPI.GPIO
+```
+```python3
+pip3 install adafruit-blinka
+```
+
+### 5. Install thermal printer library
+```python3
+git clone https://github.com/adafruit/Adafruit_CircuitPython_Thermal_Printer.git
+```
+```python3
+pip install setup.py
+```
+
+## 2.3) Printing
+
+### Test Printing
+
+For adafruit mini thermal printer git, there are two holes(J1). The J1 holes work as a switch for this printer. You have to short those as you connect a wire into the holes. Version number and baudrate number is printed out on the test printing.
+
+**printer version number : 2.69
+printer baudrate number : 9600**
+(version number and baudrate number is different depending on the printer)
+
+### Print receipt
+
+In the thermal printer library that you downloaded, you can find example folder and file.
+
+```python3
+cd Adafruit_CircuitPython_Thermal_Printer
+cd examples
+vim thermal_printer_simpletest.py
+```
+
+You have to change the version number and baudrate number in the example file code.
+
+This is the example code to activate the printer.
+
+```
+import adafruit_thermal_printer
+import serial
+
+ThermalPrinter = adafruit_thermal_printer.get_printer_class(2.69)
+
+uart = serial.Serial("/dev/ttyUSB0", baudrate=9600, timeout=3000)
+ 
+printer = ThermalPrinter(uart)
+
+printer.warm_up()
+```
+
+After you change the information, test the code for printing.
+```python3
+python3 <file.py>
+```
 ## 2.4) Code
+
+
 
 # 3) Setting up TRON Wallet
 
