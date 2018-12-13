@@ -30,7 +30,7 @@ class ToAddressList(QtGui.QListWidget):
             pass
         else:
             lastTransaction = getlasttransactionobjectto(user.address)
-            if (lastTransaction.hash not in self.cachedhashes):
+            if (lastTransaction and lastTransaction.hash not in self.cachedhashes):
                 QtGui.QMessageBox.information(QtGui.QWidget(),  "Transaction Successful", "Recieved $" + str(formatBalance(lastTransaction.amount)) +  " from " + lastTransaction.toAddress)
                 self.cachedhashes.append(lastTransaction.hash)
                 self.addItem(lastTransaction.toStr())
@@ -55,7 +55,7 @@ class FromAddressList(QtGui.QListWidget):
             pass
         else:
             lastTransaction = getlasttransactionobjectfrom(user.address)
-            if (lastTransaction.hash not in self.cachedhashes):
+            if (lastTransaction and lastTransaction.hash not in self.cachedhashes):
                 QtGui.QMessageBox.information(QtGui.QWidget(), "Transaction Successful", "Sent $" + str(formatBalance(lastTransaction.amount)) +  " to " + lastTransaction.toAddress)
                 self.cachedhashes.append(lastTransaction.hash)
                 self.addItem(lastTransaction.toStr())
