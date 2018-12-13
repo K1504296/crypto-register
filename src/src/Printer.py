@@ -4,7 +4,7 @@ from User import user
 
 import serial
 import subprocess
-import adafruit_thermal_printer
+#import adafruit_thermal_printer
 
 
 def printOutFinalBill():
@@ -13,16 +13,13 @@ def printOutFinalBill():
     printer = ThermalPrinter(uart)
     printer.warm_up()
 
-    printer.size = adafruit_thermal_printer.SIZE_LARGE
-    printer.justify = adafruit_thermal_printer.JUSTIFY_CENTER
-    printer.underline = adafruit_thermal_printer.UNDERLINE_THICK
-
-    printer.print('Garam Market!')
 
     printer.underline = None
     printer.size = adafruit_thermal_printer.SIZE_SMALL
     printer.justify = adafruit_thermal_printer.JUSTIFY_CENTER
     printer.underline = adafruit_thermal_printer.UNDERLINE_THICK
+    printer.print('Garam Market!')
+
     printer.print('9700 Gilman Dr')
     printer.print('La Jolla, CA, 92093')
 
