@@ -13,7 +13,7 @@ TIMEOUT = 3000
 
 def printOutFinalBill():
     ThermalPrinter = adafruit_thermal_printer.get_printer_class(2.67)
-    uart = serial.Serial(PORT, BAUDRATE, TIMEOUT)
+    uart = serial.Serial(PORT, baudrate=BAUDRATE, timeout=TIMEOUT)
     printer = ThermalPrinter(uart)
     printer.warm_up()
 
