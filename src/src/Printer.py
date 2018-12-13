@@ -6,10 +6,14 @@ import serial
 import subprocess
 import adafruit_thermal_printer
 
+PORT = "/dev/ttyUSB0"
+BAUDRATE = 9600
+TIMEOUT = 3000
+
 
 def printOutFinalBill():
     ThermalPrinter = adafruit_thermal_printer.get_printer_class(2.67)
-    uart = serial.Serial("/dev/ttyUSB0", baudrate=9600, timeout=3000)
+    uart = serial.Serial(PORT, BAUDRATE, TIMEOUT)
     printer = ThermalPrinter(uart)
     printer.warm_up()
 
