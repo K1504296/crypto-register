@@ -27,6 +27,18 @@ def validAddress(address):
         return True
     return False
 
+def getpower(address):
+    '''
+
+        Get the Tron Power
+
+    :param address:
+    :return: Tron Power
+    '''
+    response = requests.get(scanendpoint + '/' + api + '/' + "account", params = {"address" : address})
+    if (validresponse(response)):
+        return response.json()["data"][0]["power"]
+    return False
 
 def getbalance(address):
     '''

@@ -99,6 +99,30 @@ class RegisterGrid(QtGui.QGridLayout):
         self.address = QtGui.QLineEdit("TRON Public Address")
         self.address.setStyleSheet("color: rgb(255, 255, 255);" + NO_BORDER)
 
+        self.optional = QtGui.QLabel("Optional")
+
+        self.binancekeystr = "Binance API Key"
+        self.binancekey = QtGui.QLineEdit("Binance API Key")
+        self.binancekey.setStyleSheet("color: rgb(255, 255, 255);" + NO_BORDER)
+
+        self.binancepwdstr = "Binance API Password"
+        self.binancepwd = QtGui.QLineEdit("Binance API Password")
+        self.binancepwd.setStyleSheet("color: rgb(255, 255, 255);" + NO_BORDER)
+
+        self.twiliokeystr = "Twilio API Key"
+        self.twiliokey = QtGui.QLineEdit("Twilio API Key")
+        self.twiliokey.setStyleSheet("color: rgb(255, 255, 255);" + NO_BORDER)
+
+        self.twiliopwdstr = "Twilio API Password"
+        self.twiliopwd = QtGui.QLineEdit("Twilio API Password")
+        self.twiliopwd.setStyleSheet("color: rgb(255, 255, 255);" + NO_BORDER)
+
+        self.twphonenumber = QtGui.QLineEdit("Twilio PhoneNumber")
+        self.twphonenumber.setStyleSheet("color: rgb(255, 255, 255);" + NO_BORDER)
+
+        self.phonenumber = QtGui.QLineEdit("PhoneNumber")
+        self.phonenumber.setStyleSheet("color: rgb(255, 255, 255);" + NO_BORDER)
+
         self.register = QtGui.QPushButton("Register")
         self.register.clicked.connect(self.registerUser)
         self.register.setStyleSheet("color: rgb(255, 255, 255);" + NO_BORDER)
@@ -107,11 +131,17 @@ class RegisterGrid(QtGui.QGridLayout):
         self.login.clicked.connect(self.backtoLogin)
         self.login.setStyleSheet("color: rgb(255, 255, 255);" + NO_BORDER)
 
-        self.addWidget(self.username)
-        self.addWidget(self.password)
-        self.addWidget(self.address)
-        self.addWidget(self.register)
-        self.addWidget(self.login)
+        self.addWidget(self.username, 0, 0, 1, 2)
+        self.addWidget(self.password, 1, 0, 1, 2)
+        self.addWidget(self.address, 2, 0, 1, 2)
+        self.addWidget(self.optional, 3, 0, 1, 2)
+        self.addWidget(self.binancekey, 4, 0, 1, 1)
+        self.addWidget(self.binancepwd, 4, 1, 1, 1)
+        self.addWidget(self.twiliokey, 5, 0, 1, 1)
+        self.addWidget(self.twiliopwd, 5, 1, 1, 1)
+        self.addWidget(self.phonenumber, 6, 0, 1, 2)
+        self.addWidget(self.register, 7, 0, 1, 1)
+        self.addWidget(self.login, 7, 1, 1, 1)
 
     def backtoLogin(self):
         self.parent().backtoLogin()
@@ -119,7 +149,14 @@ class RegisterGrid(QtGui.QGridLayout):
 
     def registerUser(self):
         if (validAddress(self.address.text())):
-            register(self.username.text(), self.password.text(), self.address.text())
+            twilio = False
+            binance = False
+            if (self.twiliopwd.text() != self.twiliopwdstr and self.twiliokey.text() != self.twiliokeystr):
+                twilio = [self.twiliokey.text(), self.twiliopwd.text(), self.phonenumber.text(), self.twphonenumber.text()]
+
+            if (self.binancepwd.text() != self.binancepwdstr and self.binancekey.text() != self.binancekeystr):
+                binance = [self.binancekey.text(), self.binancepwd.text()]
+            register(self.username.text(), self.password.text(), self.address.text(), binance, twilio)
             self.backtoLogin()
 
 

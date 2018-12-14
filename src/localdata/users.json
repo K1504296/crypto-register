@@ -1,1 +1,1 @@
-{"Username": [{"password": "Password", "address": "TMZtJCtmk7ykoCFn5WTSKbedgv8xFuucfz"}], "Username1": [{"password": "Password", "address": "TJR8T9jWu6xn99FaaLfFzY6GHLu7hPtm71"}]}
+{"Username": {"password": "Password", "address": "TMZtJCtmk7ykoCFn5WTSKbedgv8xFuucfz", "twilio": {"key": "Twilio API Key1", "pwd": "Twilio API Password1", "phone": "PhoneNumber"}, "binance": {"key": "Binance API Key1", "pwd": "Binance API Password1"}}, "Username1": {"password": "Password", "address": "TMZtJCtmk7ykoCFn5WTSKbedgv8xFuucfz"}}

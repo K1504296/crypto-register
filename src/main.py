@@ -12,16 +12,6 @@ from FullDemo import fullDemo
 from LoginScreen import runLoginApp
 
 def main():
-    val = input("Type either q, f, p for the QuickDemo, FullDemo, and App respectfully\n")
-
-    if (val == "q"):
-        quickDemo()
-    elif (val == "f"):
-        fullDemo()
-    elif (val == "p"):
-        runLoginApp()
-    else:
-        val = input("Incorrect Input!")
-
+    runLoginApp()
 if __name__ == "__main__":
     main()

@@ -3,7 +3,7 @@ from User import user
 
 import serial
 import subprocess
-import adafruit_thermal_printer
+#import adafruit_thermal_printer
 
 PORT = "/dev/ttyUSB0"
 BAUDRATE = 9600
@@ -11,7 +11,7 @@ TIMEOUT = 3000
 
 
 def printOutFinalBill():
-    ThermalPrinter = adafruit_thermal_printer.get_printer_class(2.67)
+    '''ThermalPrinter = adafruit_thermal_printer.get_printer_class(2.67)
     uart = serial.Serial(PORT, baudrate=BAUDRATE, timeout=TIMEOUT)
     printer = ThermalPrinter(uart)
     printer.warm_up()
@@ -48,4 +48,4 @@ def printOutFinalBill():
     script = ["python2.7", "src/PrintQRCode.py", user.address]
     process = subprocess.Popen(" ".join(script),
                                shell=True,
-                               env={"PYTHONPATH": "."})
+                               env={"PYTHONPATH": "."})'''
