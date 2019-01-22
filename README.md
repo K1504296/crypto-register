@@ -1,3 +1,35 @@
+---
+# Front Matter
+title:  Crypto Register
+permalink: /projects/crypto-register/
+author: Garam An
+description: The goal of the project is to make a user-friendly system for both the owner and the customer. There are three displays, one for the business owner, one to display the qr code, and one to list the items bought by the customer, which are all connected to DragonBoard 410c. Customers will be able to pay for their items with a quick scan of the business owner's address. The transferred cryptocurrency is available to check on the business display.
+image:
+    path: /assets/images/projects/share_image.png
+    list:
+        - Overview Diagram.jpg
+        - ECE191_HardwareSketch.PNG
+social:
+  name: 96Boards
+  links:
+    - https://twitter.com/96boards
+    - https://www.facebook.com/96Boards/
+    - https://www.linkedin.com/company/96boards/
+    - https://plus.google.com/+96Boards
+    - https://github.com/96boards
+project:
+    difficulty_level:
+     - Expert
+    boards_used:
+        - dragonboard410c
+        - sensors-mezzanine
+    verticals:
+        - Maker
+        - Digital Signage
+tags:
+- crypto-currency
+---
+
 # Receipt Printer
 
 # Table of Contents
@@ -5,8 +37,6 @@
 - 1) Hardware
   - 1.1) Hardware Requirements
   - 1.2) Hardware Setup
-
-
 
 # 1) Hardware
 
